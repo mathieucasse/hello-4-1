@@ -1,0 +1,113 @@
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-k5sds[0m
+{"level":"info","ts":1590063273.7416897,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590063273.7434773,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-9qp44[0m
+{"level":"info","ts":1590063274.6155164,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590063274.6172042,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-mathieucasse-hello-4-1-master-r-r4tjs-ps8wg[0m
+{"level":"info","ts":1590063281.7902172,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590063282.8967388,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/************/hello-4-1.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:16590d1ed62d6c0b9bc63f44384094449e7172db
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN express-hello@1.0.0 No repository field.
+
+added 50 packages from 37 contributors and audited 50 packages in 1.568s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> express-hello@1.0.0 test /workspace/source
+> exit 0
+
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0521 12:14:50.234337      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E0521 12:14:50.676237      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0521 12:14:50.679250      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0002] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Built cross stage deps: map[]                
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0003] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0004] Executing 0 build triggers                   
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Checking for cached layer gcr.io/jenkins-x-277814/cache:f65fbfe13530aaa9045d5ceedf268975161dc364540e12f613e90640eb237116... 
+[36mINFO[0m[0005] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0010] ENV PORT 8080                                
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] EXPOSE 8080                                  
+[36mINFO[0m[0010] cmd: EXPOSE                                  
+[36mINFO[0m[0010] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0010] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0010] WORKDIR /usr/src/app                         
+[36mINFO[0m[0010] cmd: workdir                                 
+[36mINFO[0m[0010] Changed working directory to /usr/src/app    
+[36mINFO[0m[0010] Creating directory /usr/src/app              
+[36mINFO[0m[0010] Resolving 1 paths                            
+[36mINFO[0m[0010] Taking snapshot of files...                  
+[36mINFO[0m[0010] COPY . .                                     
+[36mINFO[0m[0011] Resolving 517 paths                          
+[36mINFO[0m[0011] Taking snapshot of files...                  
+[36mINFO[0m[0011] CMD ["npm", "start"]                         
+[36mINFO[0m[0011] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0011] Pushing layer gcr.io/jenkins-x-277814/cache:f65fbfe13530aaa9045d5ceedf268975161dc364540e12f613e90640eb237116 to cache now 
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/hello-4-1 to an unshallow repository
+Generating change log from git ref 8bf851a13e496dd8a8d1d483ea88e8a56ffc06d5 => 0929f898d21c96bc8aa5c941c37d8f86b050ce14
+WARNING: No release found for ************/hello-4-1 and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/************/hello-4-1/releases/tag/v0.0.2
+generated: /workspace/source/charts/hello-4-1/templates/release.yaml
+Created Release hello-4-1-0-0-2 resource in namespace **
+Updating PipelineActivity ************-hello-4-1-master-2 with version 0.0.2
+Updated PipelineActivities ************-hello-4-1-master-2 with release notes URL: https://github.com/************/hello-4-1/releases/tag/v0.0.2
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file hello-4-1-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mmathieucasse-hello-4-1-master-r-r4tjs-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app hello-4-1 version 0.0.2 to namespace **-staging
+Created Pull Request: https://github.com/************/environment-********-staging/pull/8
+Added label updatebot to Pull Request https://github.com/************/environment-********-staging/pull/8
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/8
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/8
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/8
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/8
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/8
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/8
+got git provider status pending from PR https://github.com/************/environment-********-staging/pull/8
+Pull Request https://github.com/************/environment-********-staging/pull/8 is merged at sha 4d91be04c9c434ef6c744558b8045775ce6f1d0e
+Pull Request merged but we are not waiting for the update pipeline to complete!
